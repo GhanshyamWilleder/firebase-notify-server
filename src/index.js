@@ -2,6 +2,7 @@ import express from "express"
 
 import cors from "cors"
 import { pushNotification } from "./firebase.js"
+const port = process.env.PORT || 8080
 
 const app = express()
 
@@ -51,6 +52,6 @@ app.post("/send", async (req, res) => {
   }
 })
 
-app.listen(8000, () => {
+app.listen(port, () => {
   console.log("listening port 8000")
 })
